@@ -36,12 +36,19 @@ function showLogin() {
     `;
   }
   
-  
   function login() {
     const username = document.getElementById("login-username").value;
+  
     alert(`Welcome back, ${username}`);
     document.getElementById("logoutBtn").classList.remove("d-none");
-    document.getElementById("main-content").innerHTML = `<h3 class="text-success text-center">Hello, ${username}! You are logged in.</h3>`;
+    document.getElementById("welcomeText").textContent = `Welcome, ${username}`;
+  
+    document.getElementById("main-content").innerHTML = `
+      <div class="text-center">
+        <h1 class="text-success">Hello, ${username}!</h1>
+        <p>You are now logged in to CloudMusic.</p>
+      </div>
+    `;
   }
   
   function register() {
@@ -50,12 +57,20 @@ function showLogin() {
     const password = document.getElementById("register-password").value;
   
     alert(`Registered with:\nEmail: ${email}\nUsername: ${username}`);
-    document.getElementById("main-content").innerHTML = `<h3 class="text-primary text-center">Registration complete!</h3>`;
+    document.getElementById("main-content").innerHTML = `
+      <h3 class="text-primary text-center">Registration complete!</h3>
+      <p class="text-center">You can now login with your new account.</p>
+    `;
   }
   
   function logout() {
     alert("You've been logged out.");
     document.getElementById("logoutBtn").classList.add("d-none");
+    document.getElementById("welcomeText").textContent = "Welcome, guest";
+    renderHomepage();
+  }
+  
+  function renderHomepage() {
     document.getElementById("main-content").innerHTML = `
       <div class="text-center">
         <h1>Welcome to CloudMusic 🎧</h1>
@@ -63,4 +78,7 @@ function showLogin() {
       </div>
     `;
   }
+  
+  // Optional: render homepage by default on page load
+  window.onload = renderHomepage;
   

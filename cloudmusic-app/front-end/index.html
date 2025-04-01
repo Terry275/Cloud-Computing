@@ -2,34 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CloudMusic 🎵</title>
+  <title>Dashboard - CloudMusic</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
-
+<body class="bg-dark text-light">
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">🎵 CloudMusic</a>
-      <div class="d-flex">
-        <button class="btn btn-light me-2" onclick="showLogin()">Login</button>
-        <button class="btn btn-light me-2" onclick="showRegister()">Register</button>
-        <button class="btn btn-danger d-none" id="logoutBtn" onclick="logout()">Logout</button>
-      </div>
-    </div>
+  <nav class="navbar navbar-dark bg-black px-4">
+    <span class="navbar-brand">🎵 My Music App</span>
+    <div class="text-white-50">Welcome, <span class="fw-bold">your@email.com</span></div>
+    <button class="btn btn-outline-danger ms-3" onclick="logout()">Logout</button>
   </nav>
 
-  <!-- Main content container -->
-  <div class="container mt-5" id="main-content">
-    <div class="text-center">
-      <h1>Welcome to CloudMusic 🎧</h1>
-      <p>Enjoy cloud-based music streaming anywhere, anytime.</p>
+  <div class="container mt-5">
+    <h3 class="text-purple">Your Songs</h3>
+    <p>You have no songs subscribed yet.</p>
+
+    <h4 class="text-purple mt-5">Search Songs</h4>
+    <div class="row g-2 mb-3">
+      <div class="col-md-3"><input class="form-control glowing-input" placeholder="Title" /></div>
+      <div class="col-md-3"><input class="form-control glowing-input" placeholder="Artist" /></div>
+      <div class="col-md-2"><input class="form-control glowing-input" placeholder="Year" /></div>
+      <div class="col-md-3"><input class="form-control glowing-input" placeholder="Album" /></div>
+      <div class="col-md-1 d-grid">
+        <button class="btn btn-purple">Search</button>
+      </div>
     </div>
+    <p class="text-warning">No result is retrieved. Please query again.</p>
   </div>
 
-  <script src="js/script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function logout() {
+      alert("Logged out");
+      window.location.href = "login.html";
+    }
+  </script>
 </body>
 </html>
