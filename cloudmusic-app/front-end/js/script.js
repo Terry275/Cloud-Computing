@@ -64,7 +64,6 @@ function showLogin() {
   }
   
   function logout() {
-    alert("You've been logged out.");
     document.getElementById("logoutBtn").classList.add("d-none");
     document.getElementById("welcomeText").textContent = "Welcome, guest";
     renderHomepage();
