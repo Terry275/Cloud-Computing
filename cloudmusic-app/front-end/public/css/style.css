@@ -1,0 +1,137 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .text-purple {
+    color: #79D7BE;
+  }
+  
+  .btn-purple {
+    background-color: #79D7BE;
+    color: white;
+    border: none;
+  }
+  
+  .btn-purple:hover {
+    background-color: #79D7BE;
+  }
+  
+  .glowing-input {
+    background-color: #1e1e2f;
+    border: 1px solid #79D7BE;
+    color: white;
+  }
+  
+  .glowing-input:focus {
+    box-shadow: 0 0 0 0.25rem rgba(77, 161, 169, 0.25);
+    border-color: #79D7BE;
+  }
+  
+  
+  .carousel {
+    position: relative;
+    overflow: visible;
+  }
+
+  .carousel-item {
+    text-align: center;
+    overflow: visible;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: auto;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .carousel-control-prev {
+    left: 200px;
+    background-color: #79D7BE;
+  }
+
+  .carousel-control-next {
+    right: 200px;
+    background-color: #79D7BE;
+  }
+
+  .carousel-indicators {
+    bottom: -20px;
+  }
+
+  .carousel-indicators [data-bs-target] {
+    background-color: #ffc107;
+    opacity: 0.5;
+  }
+
+  .carousel-indicators .active {
+    background-color: #ffc107;
+    opacity: 1;
+  }
+
+  .song-card {
+    max-width: 360px;
+    margin: auto;
+    border-radius: 3%;
+    background-color:rgba(77, 161, 169, 0.1);
+    color: azure;
+  }
+
+  .song-card img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    margin: auto;
+    padding: 12px;
+  }
+
+  .form-control:focus {
+    background-color: #1e1e2f;
+    color: azure;
+  }
+
+  .form-control {
+    color: azure;
+    height: 125%;
+  }
+
+  .search-btn {
+
+    height: 125%;
+
+  }
+
+  .glowing-input {
+   color: aliceblue;
+  
+  }
+
+  
+  .glowing-input::placeholder {
+    color: #999; 
+    opacity: 1;
+  }
+
+
+
+
+
+
+  
+
+  .card-img-top-result {
+    height: 160px;
+    object-fit: cover;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+  
+  .card-result {
+    transition: transform 0.2s ease;
+    background-color: rgba(33, 37, 41, 1);
+  }
+  
+  .card-result:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px rgba(200, 132, 252, 0.3);
+  }
+  

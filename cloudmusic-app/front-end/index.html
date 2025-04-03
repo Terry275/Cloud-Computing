@@ -2,14 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Dashboard - CloudMusic</title>
+  <title>Dashboard</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="./public/asset/icon/favicon-32x32.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="../public/css/reset.css" />
+  <link rel="stylesheet" href="./public/css/style.css" />
+
+
+
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;500;600;700&family=Roboto+Serif:opsz,wght@8144,400;8144,500;8144,600&display=swap"
+      rel="stylesheet"
+  />
+
+    <!-- Font Awesome 5 -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+
 </head>
 <body class="bg-dark text-light">
   <!-- Navbar -->
   <nav class="navbar navbar-dark bg-black px-4">
-    <span class="navbar-brand">🎵 My Music App</span>
+    <span class="col-md-1 navbar-brand"><img src="./public/asset/icon/Untitled 2.svg" width="250px" height="38px" ></span>
     <div class="text-white-50">Welcome, <span class="fw-bold">your@email.com</span></div>
     <button class="btn btn-outline-danger ms-3" onclick="logout()">Logout</button>
   </nav>
@@ -17,25 +42,159 @@
   <div class="container mt-5">
     <h3 class="text-purple">Your Songs</h3>
     <p>You have no songs subscribed yet.</p>
+    
+
+    <div class="container mt-5">
+      <h2 class="text-center text-purple">Your Songs</h2>
+  
+      <div id="songCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+  
+          <!-- First Song -->
+          <div class="carousel-item active">
+            <div class="card song-card text-center">
+              <img src="./public/asset/image/z4236319429616_df3aab15d7ceac4622eb2b457faf5db6.jpg" class="card-img-top" alt="Artist 1">
+              <div class="card-body">
+                <h5 class="card-title">Song Title 1</h5>
+                <p class="card-text">
+                  <strong>Artist:</strong> Artist Name 1 <br>
+                  <strong>Album:</strong> Album Name 1 <br>
+                  <strong>Year:</strong> 2020
+                </p>
+                <button class="btn btn-warning">Remove Song</button>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Second Song -->
+          <div class="carousel-item">
+            <div class="card song-card text-center">
+              <img src="./public/asset/image/z3850217823030_ddc0631b59978d25ee2088b1ff7c044f.jpg" class="card-img-top" alt="Artist 2">
+              <div class="card-body">
+                <h5 class="card-title">Song Title 2</h5>
+                <p class="card-text">
+                  <strong>Artist:</strong> Artist Name 2 <br>
+                  <strong>Album:</strong> Album Name 2 <br>
+                  <strong>Year:</strong> 2022
+                </p>
+                <button class="btn btn-warning">Remove Song</button>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+  
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#songCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(100%); width: 30px; height: 30px;"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#songCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(100%); width: 30px; height: 30px;"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+  
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#songCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#songCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+  
+        </div>
+      </div>
+    </div>
 
     <h4 class="text-purple mt-5">Search Songs</h4>
     <div class="row g-2 mb-3">
-      <div class="col-md-3"><input class="form-control glowing-input" placeholder="Title" /></div>
-      <div class="col-md-3"><input class="form-control glowing-input" placeholder="Artist" /></div>
+      <div class="col-md-4"><input class="form-control glowing-input" placeholder="Title" /></div>
+      <div class="col-md-2"><input class="form-control glowing-input" placeholder="Artist" /></div>
       <div class="col-md-2"><input class="form-control glowing-input" placeholder="Year" /></div>
-      <div class="col-md-3"><input class="form-control glowing-input" placeholder="Album" /></div>
-      <div class="col-md-1 d-grid">
-        <button class="btn btn-purple">Search</button>
+      <div class="col-md-2"><input class="form-control glowing-input" placeholder="Album" /></div>
+      <div class="col-md-2 d-grid">
+        <button class="btn btn-outline-warning search-btn">Search</button>
       </div>
     </div>
     <p class="text-warning">No result is retrieved. Please query again.</p>
   </div>
 
+
+  <div>
+    <!-- Search Results Grid -->
+<div class="container mt-4">
+  <h5 class="text-white mb-3">Search Results</h5>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+
+    <!-- Song Card 1 -->
+    <div class="col">
+      <div class="card card-result text-white h-100 border-0">
+        <img src="./public/asset/image/z5662079951506_03c91f98381577c5bf6e5e14f6a5858e.jpg" class="card-img-top-result" alt="Song Cover 1">
+        <div class="card-body px-2 py-3">
+          <h6 class="card-title text-purple fw-semibold mb-1">The Nights</h6>
+          <p class="card-text small mb-1">Avicii</p>
+          <p class="card-text small">Stories • 2015</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Song Card 2 -->
+    <div class="col">
+      <div class="card card-result text-white h-100 border-0">
+        <img src="./public/asset/image/z5662079951506_03c91f98381577c5bf6e5e14f6a5858e.jpg" class="card-img-top-result" alt="Song Cover 2">
+        <div class="card-body px-2 py-3">
+          <h6 class="card-title text-purple fw-semibold mb-1">Blinding Lights</h6>
+          <p class="card-text small mb-1">The Weeknd</p>
+          <p class="card-text small">After Hours • 2020</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Song Card 3 -->
+    <div class="col">
+      <div class="card card-result text-white h-100 border-0">
+        <img src="./public/asset/image/z5662079951506_03c91f98381577c5bf6e5e14f6a5858e.jpg" class="card-img-top-result" alt="Song Cover 3">
+        <div class="card-body px-2 py-3">
+          <h6 class="card-title text-purple fw-semibold mb-1">Shape of You</h6>
+          <p class="card-text small mb-1">Ed Sheeran</p>
+          <p class="card-text small">Divide • 2017</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Song Card 4 -->
+    <div class="col">
+      <div class="card card-result text-white h-100 border-0">
+        <img src="./public/asset/image/z5662079951506_03c91f98381577c5bf6e5e14f6a5858e.jpg" class="card-img-top-result" alt="Song Cover 4">
+        <div class="card-body px-2 py-3">
+          <h6 class="card-title text-purple fw-semibold mb-1">As It Was</h6>
+          <p class="card-text small mb-1">Harry Styles</p>
+          <p class="card-text small">Harry's House • 2022</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Song Card 5 -->
+    <div class="col">
+      <div class="card card-result text-white h-100 border-0">
+        <img src="./public/asset/image/z5662079951506_03c91f98381577c5bf6e5e14f6a5858e.jpg" class="card-img-top-result" alt="Song Cover 5">
+        <div class="card-body px-2 py-3">
+          <h6 class="card-title text-purple fw-semibold mb-1">Levitating</h6>
+          <p class="card-text small mb-1">Dua Lipa</p>
+          <p class="card-textsmall">Future Nostalgia • 2020</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  </div>
+
   <script>
     function logout() {
-      alert("Logged out");
+      /* alert("Logged out"); */
       window.location.href = "login.html";
     }
   </script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="./public/js/script.js"></script>
 </body>
 </html>

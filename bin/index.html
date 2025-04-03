@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Music Carousel</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      background: linear-gradient(to bottom, rgba(10, 10, 10, 0.9), rgba(0, 0, 0, 1));
+      color: white;
+      min-height: 100vh;
+    }
+
+    .carousel {
+      position: relative;
+      overflow: visible;
+    }
+
+    .carousel-item {
+      text-align: center;
+      overflow: visible;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: auto;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .carousel-control-prev {
+      left: 200px;
+    }
+
+    .carousel-control-next {
+      right: 200px;
+    }
+
+    .carousel-indicators {
+      bottom: -20px;
+    }
+
+    .carousel-indicators [data-bs-target] {
+      background-color: #dc3545;
+      opacity: 0.5;
+    }
+
+    .carousel-indicators .active {
+      background-color: #ffc107;
+      opacity: 1;
+    }
+
+    .song-card {
+      max-width: 400px;
+      margin: auto;
+    }
+
+    .song-card img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h2 class="text-white text-center">Your Songs</h2>
+
+    <div id="songCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- First Song -->
+        <div class="carousel-item active">
+          <div class="card song-card text-center">
+            <img src="https://via.placeholder.com/200" class="card-img-top" alt="Artist 1">
+            <div class="card-body">
+              <h5 class="card-title">Song Title 1</h5>
+              <p class="card-text">
+                <strong>Artist:</strong> Artist Name 1 <br>
+                <strong>Album:</strong> Album Name 1 <br>
+                <strong>Year:</strong> 2020
+              </p>
+              <button class="btn btn-danger">Remove Song</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second Song -->
+        <div class="carousel-item">
+          <div class="card song-card text-center">
+            <img src="https://via.placeholder.com/200" class="card-img-top" alt="Artist 2">
+            <div class="card-body">
+              <h5 class="card-title">Song Title 2</h5>
+              <p class="card-text">
+                <strong>Artist:</strong> Artist Name 2 <br>
+                <strong>Album:</strong> Album Name 2 <br>
+                <strong>Year:</strong> 2022
+              </p>
+              <button class="btn btn-danger">Remove Song</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add more .carousel-item blocks here -->
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#songCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(100%); width: 30px; height: 30px;"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#songCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(100%); width: 30px; height: 30px;"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#songCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#songCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <!-- Add more indicators as needed -->
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
