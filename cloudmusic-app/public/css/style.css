@@ -85,12 +85,12 @@ body {
     padding: 12px;
   }
 
-  .form-control:focus {
+  .form-control-main:focus {
     background-color: #1e1e2f;
     color: azure;
   }
 
-  .form-control {
+  .form-control-main {
     color: azure;
     height: 125%;
   }
