@@ -107,7 +107,9 @@ body {
   }
 
   
-  .glowing-input::placeholder {
+  .glowing-input::placeholder,
+  .card-text
+  {
     color: #999; 
     opacity: 1;
   }

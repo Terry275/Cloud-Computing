@@ -5,10 +5,10 @@
   <title>Dashboard</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/x-icon" href="./public/asset/icon/favicon-32x32.png">
+  <link rel="icon" type="image/x-icon" href="asset/icon/favicon-32x32.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="../public/css/reset.css" />
-  <link rel="stylesheet" href="./public/css/style.css" />
+  <!-- <link rel="stylesheet" href="css/reset.css" /> -->
+  <link rel="stylesheet" href="css/style.css" />
 
 
 
@@ -34,8 +34,10 @@
 <body class="bg-dark text-light">
   <!-- Navbar -->
   <nav class="navbar navbar-dark bg-black px-4">
-    <span class="col-md-1 navbar-brand"><img src="./public/asset/icon/Untitled 2.svg" width="250px" height="38px" ></span>
-    <div class="text-white-50">Welcome, <span class="fw-bold">your@email.com</span></div>
+    <span class="col-md-1 navbar-brand"><img src="asset/icon/Untitled 2.svg" width="250px" height="38px" ></span>
+    <div class="text-white-50">Welcome, <span class="fw-bold">user@email.com</span></div>
+
+    
     <button class="btn btn-outline-danger ms-3" onclick="logout()">Logout</button>
   </nav>
 
@@ -53,7 +55,7 @@
           <!-- First Song -->
           <div class="carousel-item active">
             <div class="card song-card text-center">
-              <img src="./public/asset/image/z4236319429616_df3aab15d7ceac4622eb2b457faf5db6.jpg" class="card-img-top" alt="Artist 1">
+              <img src="asset/image/z4236319429616_df3aab15d7ceac4622eb2b457faf5db6.jpg" class="card-img-top" alt="Artist 1">
               <div class="card-body">
                 <h5 class="card-title">Song Title 1</h5>
                 <p class="card-text">
@@ -61,6 +63,7 @@
                   <strong>Album:</strong> Album Name 1 <br>
                   <strong>Year:</strong> 2020
                 </p>
+                <br>
                 <button class="btn btn-warning">Remove Song</button>
               </div>
             </div>
@@ -69,7 +72,7 @@
           <!-- Second Song -->
           <div class="carousel-item">
             <div class="card song-card text-center">
-              <img src="./public/asset/image/z3850217823030_ddc0631b59978d25ee2088b1ff7c044f.jpg" class="card-img-top" alt="Artist 2">
+              <img src="asset/image/z3850217823030_ddc0631b59978d25ee2088b1ff7c044f.jpg" class="card-img-top" alt="Artist 2">
               <div class="card-body">
                 <h5 class="card-title">Song Title 2</h5>
                 <p class="card-text">
@@ -77,6 +80,7 @@
                   <strong>Album:</strong> Album Name 2 <br>
                   <strong>Year:</strong> 2022
                 </p>
+                <br>
                 <button class="btn btn-warning">Remove Song</button>
               </div>
             </div>
@@ -113,7 +117,7 @@
         <button class="btn btn-outline-warning search-btn">Search</button>
       </div>
     </div>
-    <p class="text-warning">No result is retrieved. Please query again.</p>
+ <!--    <p class="text-warning">No result is retrieved. Please query again.</p> -->
   </div>
 
 
@@ -123,78 +127,97 @@
   <h5 class="text-white mb-3">Search Results</h5>
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
 
-    <!-- Song Card 1 -->
-    <div class="col">
-      <div class="card card-result text-white h-100 border-0">
-        <img src="./public/asset/image/z5662079951506_03c91f98381577c5bf6e5e14f6a5858e.jpg" class="card-img-top-result" alt="Song Cover 1">
-        <div class="card-body px-2 py-3">
-          <h6 class="card-title text-purple fw-semibold mb-1">The Nights</h6>
-          <p class="card-text small mb-1">Avicii</p>
-          <p class="card-text small">Stories • 2015</p>
-        </div>
-      </div>
-    </div>
 
-    <!-- Song Card 2 -->
-    <div class="col">
-      <div class="card card-result text-white h-100 border-0">
-        <img src="./public/asset/image/z5662079951506_03c91f98381577c5bf6e5e14f6a5858e.jpg" class="card-img-top-result" alt="Song Cover 2">
-        <div class="card-body px-2 py-3">
-          <h6 class="card-title text-purple fw-semibold mb-1">Blinding Lights</h6>
-          <p class="card-text small mb-1">The Weeknd</p>
-          <p class="card-text small">After Hours • 2020</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Song Card 3 -->
-    <div class="col">
-      <div class="card card-result text-white h-100 border-0">
-        <img src="./public/asset/image/z5662079951506_03c91f98381577c5bf6e5e14f6a5858e.jpg" class="card-img-top-result" alt="Song Cover 3">
-        <div class="card-body px-2 py-3">
-          <h6 class="card-title text-purple fw-semibold mb-1">Shape of You</h6>
-          <p class="card-text small mb-1">Ed Sheeran</p>
-          <p class="card-text small">Divide • 2017</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Song Card 4 -->
-    <div class="col">
-      <div class="card card-result text-white h-100 border-0">
-        <img src="./public/asset/image/z5662079951506_03c91f98381577c5bf6e5e14f6a5858e.jpg" class="card-img-top-result" alt="Song Cover 4">
-        <div class="card-body px-2 py-3">
-          <h6 class="card-title text-purple fw-semibold mb-1">As It Was</h6>
-          <p class="card-text small mb-1">Harry Styles</p>
-          <p class="card-text small">Harry's House • 2022</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Song Card 5 -->
-    <div class="col">
-      <div class="card card-result text-white h-100 border-0">
-        <img src="./public/asset/image/z5662079951506_03c91f98381577c5bf6e5e14f6a5858e.jpg" class="card-img-top-result" alt="Song Cover 5">
-        <div class="card-body px-2 py-3">
-          <h6 class="card-title text-purple fw-semibold mb-1">Levitating</h6>
-          <p class="card-text small mb-1">Dua Lipa</p>
-          <p class="card-textsmall">Future Nostalgia • 2020</p>
-        </div>
-      </div>
-    </div>
 
   </div>
 </div>
 
   </div>
 
+
   <script>
-    function logout() {
-      /* alert("Logged out"); */
-      window.location.href = "login.html";
-    }
+    document.addEventListener("DOMContentLoaded", () => {
+      const user = JSON.parse(localStorage.getItem("user"));
+  
+      if (!user) {
+        alert("You must log in first.");
+        window.location.href = "login.html";
+        return;
+      }
+  
+      // Set username
+      const userSpan = document.querySelector(".navbar .fw-bold");
+      if (userSpan) {
+        userSpan.textContent = user.username || user.email;
+      }
+  
+      // Handle logout
+      const logoutBtn = document.querySelector(".btn-outline-danger");
+      logoutBtn.addEventListener("click", () => {
+        localStorage.removeItem("user");
+        window.location.href = "login.html";
+      });
+  
+      // Search song logic
+      const searchBtn = document.querySelector(".search-btn");
+      searchBtn.addEventListener("click", async () => {
+        const title = document.querySelector('input[placeholder="Title"]').value;
+        const artist = document.querySelector('input[placeholder="Artist"]').value;
+        const album = document.querySelector('input[placeholder="Album"]').value;
+        const year = document.querySelector('input[placeholder="Year"]').value;
+  
+        console.log("Fetching...", { title, artist, album, year });
+
+        const response = await fetch("https://730j69s6v7.execute-api.us-east-1.amazonaws.com/search", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ title, artist, album, year })
+        });
+
+        const data = await response.json();
+        console.log("Response:", data); 
+
+   /*      if (data.success && data.results.length > 0) {
+          alert("Found songs!");
+        } else {
+          alert("No results found or fetch failed.");
+        } */
+
+          
+        const resultsContainer = document.querySelector(".row-cols-lg-5");
+        resultsContainer.innerHTML = ""; // clear old results
+  
+        if (!data.success || data.results.length === 0) {
+          resultsContainer.innerHTML = `<div class="text-warning">No result found.</div>`;
+          return;
+        }
+  
+        data.results.forEach(song => {
+          const html = `
+            <div class="col">
+              <div class="card card-result text-white h-100 border-0">
+                <img src="${song.img_url}" class="card-img-top-result" alt="Song Cover">
+                <div class="card-body px-2 py-3">
+                  <h6 class="card-title text-purple fw-semibold mb-1">${song.title}</h6>
+                  <p class="card-text small mb-1">${song.artist}</p>
+                  <p class="card-text small">${song.album} • ${song.year}</p>
+                </div>
+              </div>
+            </div>
+          `;
+          resultsContainer.insertAdjacentHTML("beforeend", html);
+        });
+      });
+    });
   </script>
+  
+
+
+
+
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-   <script src="./public/js/script.js"></script>
+   <script src="js/script.js"></script>
 </body>
 </html>
