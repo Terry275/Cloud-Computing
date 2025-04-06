@@ -32,111 +32,89 @@
 
 </head>
 <body class="bg-dark text-light">
-  <!-- Navbar -->
-  <nav class="navbar navbar-dark bg-black px-4">
-    <span class="col-md-1 navbar-brand"><img src="asset/icon/Untitled 2.svg" width="250px" height="38px" ></span>
-    <div class="text-white-50">Welcome, <span class="fw-bold">user@email.com</span></div>
+  
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-black px-4">
+      <span class="col-md-1 navbar-brand"><img src="asset/icon/Untitled 2.svg" width="250px" height="38px" ></span>
+      <div class="text-white-50">Welcome, <span class="fw-bold">user@email.com</span></div>
 
-    
-    <button class="btn btn-outline-danger ms-3" onclick="logout()">Logout</button>
-  </nav>
-
-  <div class="container mt-5">
-    <h3 class="text-purple">Your Songs</h3>
-    <p>You have no songs subscribed yet.</p>
-    
-
+      
+      <button class="btn btn-outline-danger ms-3" onclick="logout()">Logout</button>
+    </nav>
+  <div class="min-height-main">
     <div class="container mt-5">
-      <h2 class="text-center text-purple">Your Songs</h2>
-  
-      <div id="songCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-  
-          <!-- First Song -->
-          <div class="carousel-item active">
-            <div class="card song-card text-center">
-              <img src="asset/image/z4236319429616_df3aab15d7ceac4622eb2b457faf5db6.jpg" class="card-img-top" alt="Artist 1">
-              <div class="card-body">
-                <h5 class="card-title">Song Title 1</h5>
-                <p class="card-text">
-                  <strong>Artist:</strong> Artist Name 1 <br>
-                  <strong>Album:</strong> Album Name 1 <br>
-                  <strong>Year:</strong> 2020
-                </p>
-                <br>
-                <button class="btn btn-warning">Remove Song</button>
-              </div>
-            </div>
+      <!-- <div id="noSongsMessage">
+        <h3 class="text-purple">Your Songs</h3>
+        <p id="noSongsMessage">You have no songs subscribed yet.</p>
+      </div> -->
+      
+      
+
+      <div class="container mt-5">
+        <h2 class="text-center text-purple">Your Songs</h2>
+        <p id="noSongsMessage">You have no songs subscribed yet.</p>
+    
+        <div id="songCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+    
+          
+    
           </div>
-  
-          <!-- Second Song -->
-          <div class="carousel-item">
-            <div class="card song-card text-center">
-              <img src="asset/image/z3850217823030_ddc0631b59978d25ee2088b1ff7c044f.jpg" class="card-img-top" alt="Artist 2">
-              <div class="card-body">
-                <h5 class="card-title">Song Title 2</h5>
-                <p class="card-text">
-                  <strong>Artist:</strong> Artist Name 2 <br>
-                  <strong>Album:</strong> Album Name 2 <br>
-                  <strong>Year:</strong> 2022
-                </p>
-                <br>
-                <button class="btn btn-warning">Remove Song</button>
-              </div>
-            </div>
+    
+          <!-- Controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#songCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(100%); width: 30px; height: 30px;"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#songCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(100%); width: 30px; height: 30px;"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+    
+          <!-- Indicators -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#songCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#songCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    
           </div>
-  
         </div>
-  
-        <!-- Controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#songCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(100%); width: 30px; height: 30px;"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#songCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(100%); width: 30px; height: 30px;"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-  
-        <!-- Indicators -->
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#songCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#songCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-  
+      </div>
+
+      <h4 class="text-purple mt-5">Search Songs</h4>
+      <div class="row g-2 mb-3">
+        <div class="col-md-4"><input class="form-control form-control-main glowing-input" placeholder="Title" /></div>
+        <div class="col-md-2"><input class="form-control form-control-main glowing-input" placeholder="Artist" /></div>
+        <div class="col-md-2"><input class="form-control form-control-main glowing-input" placeholder="Year" /></div>
+        <div class="col-md-2"><input class="form-control form-control-main glowing-input" placeholder="Album" /></div>
+        <div class="col-md-2 d-grid">
+          <button class="btn btn-outline-warning search-btn">Search</button>
         </div>
+      </div>
+  <!--    <p class="text-warning">No result is retrieved. Please query again.</p> -->
+    </div>
+
+
+      <div>
+        <!-- Search Results Grid -->
+    <div class="container mt-4">
+      <h5 class="text-white mb-3">Search Results</h5>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+
+
+
       </div>
     </div>
 
-    <h4 class="text-purple mt-5">Search Songs</h4>
-    <div class="row g-2 mb-3">
-      <div class="col-md-4"><input class="form-control form-control-main glowing-input" placeholder="Title" /></div>
-      <div class="col-md-2"><input class="form-control form-control-main glowing-input" placeholder="Artist" /></div>
-      <div class="col-md-2"><input class="form-control form-control-main glowing-input" placeholder="Year" /></div>
-      <div class="col-md-2"><input class="form-control form-control-main glowing-input" placeholder="Album" /></div>
-      <div class="col-md-2 d-grid">
-        <button class="btn btn-outline-warning search-btn">Search</button>
-      </div>
     </div>
- <!--    <p class="text-warning">No result is retrieved. Please query again.</p> -->
-  </div>
-
-
-    <div>
-      <!-- Search Results Grid -->
-  <div class="container mt-4">
-    <h5 class="text-white mb-3">Search Results</h5>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
-
-
-
-    </div>
-  </div>
 
   </div>
-    <!-- Footer -->
-    <footer class="bg-black text-white text-center py-3 mt-5">
-      <small id="footerText">© Copyright Faraday Inc <span id="year"></span>. All rights reserved</small>
-    </footer>
+      <!-- Footer -->
+      <footer class="bg-black text-white text-center py-3 mt-5">
+        <small id="footerText">© Copyright Faraday Inc <span id="year"></span>. All rights reserved</small>
+      </footer>
+
+
+  
 
 <script>
   // Set current year dynamically
@@ -144,31 +122,32 @@
 </script>
 
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const user = JSON.parse(localStorage.getItem("user"));
-  
-      if (!user) {
-        alert("You must log in first.");
-        window.location.href = "login.html";
-        return;
-      }
-  
-      // Set username
-      const userSpan = document.querySelector(".navbar .fw-bold");
-      if (userSpan) {
-        userSpan.textContent = user.username || user.email;
-      }
-  
-      // Handle logout
-      const logoutBtn = document.querySelector(".btn-outline-danger");
-      logoutBtn.addEventListener("click", () => {
-        localStorage.removeItem("user");
-        window.location.href = "login.html";
-      });
-  
-      const searchBtn = document.querySelector(".search-btn");
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const user = JSON.parse(localStorage.getItem("user"));
 
+    if (!user) {
+      alert("You must log in first.");
+      window.location.href = "login.html";
+      return;
+    }
+
+    const userSpan = document.querySelector(".navbar .fw-bold");
+    if (userSpan) {
+      userSpan.textContent = user.username || user.email;
+    }
+
+    const logoutBtn = document.querySelector(".btn-outline-danger");
+    logoutBtn.addEventListener("click", () => {
+      localStorage.removeItem("user");
+      window.location.href = "login.html";
+    });
+
+    // Load carousel on page load
+    loadSubscribedSongs();
+
+    // Search button
+    const searchBtn = document.querySelector(".search-btn");
     if (searchBtn) {
       searchBtn.addEventListener("click", async () => {
         const title = document.querySelector('input[placeholder="Title"]').value;
@@ -186,200 +165,196 @@
           });
 
           const data = await res.json();
-
-          if (!data.success) {
-            alert(data.message || "Search failed.");
-            return;
-          }
-
-          const results = data.results;
           const grid = document.querySelector(".row-cols-lg-5");
-          grid.innerHTML = ""; // clear previous results
+          grid.innerHTML = "";
 
-          if (results.length === 0) {
+          if (!data.success || !data.results || data.results.length === 0) {
             grid.innerHTML = "<p class='text-warning'>No results found.</p>";
             return;
           }
 
-          results.forEach(song => {
-          const card = document.createElement("div");
-          card.className = "col";
-          card.innerHTML = `
-            <div class="card card-result text-white h-100 border-0">
-              <img src="${song.img_url}" class="card-img-top-result" alt="Cover">
-              <div class="card-body px-2 py-3">
-                <h6 class="card-title text-purple fw-semibold mb-1">${song.title}</h6>
-                <p class="card-text small mb-1">${song.artist}</p>
-                <p class="card-text small">${song.album} • ${song.year}</p>
+          data.results.forEach(song => {
+            const card = document.createElement("div");
+            card.className = "col";
+            card.innerHTML = `
+              <div class="card card-result text-white h-100 border-0">
+                <img src="${song.img_url}" class="card-img-top-result" alt="Cover">
+                <div class="card-body px-2 py-3">
+                  <h6 class="card-title text-purple fw-semibold mb-1">${song.title}</h6>
+                  <p class="card-text small mb-1">${song.artist}</p>
+                  <p class="card-text small">${song.album} • ${song.year}</p>
+                </div>
+                <button class="btn btn-outline-info-songs subscribe-btn" 
+                  data-title="${song.title}"
+                  data-artist="${song.artist}"
+                  data-album="${song.album}"
+                  data-year="${song.year}"
+                  data-img="${song.img_url}">
+                  Subscribe
+                </button>
               </div>
-              <button class="btn btn-outline-info-songs subscribe-btn" 
-                data-title="${song.title}"
-                data-artist="${song.artist}"
-                data-album="${song.album}"
-                data-year="${song.year}"
-                data-img="${song.img_url}">
-                Subscribe
-              </button>
-            </div>
-          `;
+            `;
 
+            card.querySelector(".subscribe-btn").addEventListener("click", async (e) => {
+              const payload = {
+                action: "subscribe",
+                email: user.email,
+                title: e.target.dataset.title,
+                artist: e.target.dataset.artist,
+                album: e.target.dataset.album,
+                year: e.target.dataset.year,
+                img_url: e.target.dataset.img
+              };
 
+              try {
+                const res = await fetch("https://ioik7f1gmc.execute-api.us-east-1.amazonaws.com/default/manageSubscription", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify(payload)
+                });
 
-
-
-
-
-
-
-          async function loadSubscribedSongs() {
-  const user = JSON.parse(localStorage.getItem("user"));
-  if (!user || !user.email) return;
-
-  const payload = {
-    action: "getSubscriptions",
-    email: user.email
-  };
-
-  try {
-    const res = await fetch("https://ioik7f1gmc.execute-api.us-east-1.amazonaws.com/default/manageSubscription", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
-    });
-
-    const data = await res.json();
-    if (!data.success) {
-      console.error("Failed to load subscriptions:", data.message);
-      return;
-    }
-
-    const carouselInner = document.querySelector(".carousel-inner");
-    const indicators = document.querySelector(".carousel-indicators");
-    if (!carouselInner || !indicators) return;
-
-    carouselInner.innerHTML = "";
-    indicators.innerHTML = "";
-
-    data.subscriptions.forEach((song, index) => {
-      const activeClass = index === 0 ? "active" : "";
-
-      // Carousel Item
-      const item = document.createElement("div");
-      item.className = `carousel-item ${activeClass}`;
-      item.innerHTML = `
-        <div class="card song-card text-center">
-          <img src="${song.img_url}" class="card-img-top" alt="${song.title}">
-          <div class="card-body">
-            <h5 class="card-title">${song.title}</h5>
-            <p class="card-text">
-              <strong>Artist:</strong> ${song.artist} <br>
-              <strong>Album:</strong> ${song.album} <br>
-              <strong>Year:</strong> ${song.year}
-            </p>
-            <button class="btn btn-warning unsubscribe-btn"
-              data-title="${song.title}"
-              data-artist="${song.artist}"
-              data-year="${song.year}">
-              Remove Song
-            </button>
-          </div>
-        </div>
-      `;
-
-      // Indicator
-      const indicator = document.createElement("button");
-      indicator.type = "button";
-      indicator.dataset.bsTarget = "#songCarousel";
-      indicator.dataset.bsSlideTo = index;
-      indicator.ariaLabel = `Slide ${index + 1}`;
-      if (index === 0) {
-        indicator.className = "active";
-        indicator.ariaCurrent = "true";
-      }
-
-      carouselInner.appendChild(item);
-      indicators.appendChild(indicator);
-    });
-
-    attachUnsubscribeHandlers();
-  } catch (err) {
-    console.error("Error loading subscriptions:", err);
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          // 🔁 Attach event to the new button
-          card.querySelector(".subscribe-btn").addEventListener("click", async (e) => {
-          const user = JSON.parse(localStorage.getItem("user"));
-          if (!user || !user.email) {
-            alert("Please log in first.");
-            return;
-          }
-
-          const payload = {
-            action: "subscribe",
-            email: user.email,
-            title: e.target.dataset.title,
-            artist: e.target.dataset.artist,
-            album: e.target.dataset.album,
-            year: e.target.dataset.year,
-            img_url: e.target.dataset.img
-          };
-
-          try {
-            console.log("Payload sent to Lambda:", payload);
-
-            const res = await fetch("https://ioik7f1gmc.execute-api.us-east-1.amazonaws.com/default/manageSubscription", {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify(payload)
+                const data = await res.json();
+                if (data.success) {
+                  alert("Subscribed successfully!");
+                  loadSubscribedSongs();
+                } else {
+                  alert(data.message || "Subscription failed.");
+                }
+              } catch (err) {
+                console.error(err);
+                alert("Error subscribing.");
+              }
             });
-            console.log("Payload sent to Lambda 2:", payload);
 
-
-            const data = await res.json();
-            if (data.success) {
-              alert("Subscribed successfully!");
-            } else {
-              alert(data.message || "Subscription failed.");
-            }
-          } catch (err) {
-            console.error(err);
-            alert("Error subscribing.");
-          }
-        });
-
-
-          grid.appendChild(card);
-        });
-
-
+            grid.appendChild(card);
+          });
         } catch (err) {
           console.error(err);
           alert("Server error. Please try again later.");
         }
       });
     }
-
-
-    
   });
 
-  
-  </script>
+  async function loadSubscribedSongs() {
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (!user || !user.email) return;
+
+    const payload = {
+      action: "getSubscriptions",
+      email: user.email,
+      title: "-" // temporary placeholder to satisfy backend's field check
+    };
+
+    try {
+      const res = await fetch("https://ioik7f1gmc.execute-api.us-east-1.amazonaws.com/default/manageSubscription", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+
+      const data = await res.json();
+      if (!data.success || !data.subscriptions) return;
+
+      const carouselInner = document.querySelector(".carousel-inner");
+      const indicators = document.querySelector(".carousel-indicators");
+      const noSongsMsg = document.getElementById("noSongsMessage");
+
+      // Clear previous carousel
+      carouselInner.innerHTML = "";
+      indicators.innerHTML = "";
+
+      // Hide or show the noSongsMessage based on subscription count
+      if (data.subscriptions.length === 0) {
+        noSongsMsg.style.display = "block";
+        return;
+      } else {
+        noSongsMsg.style.display = "none";
+      }
+
+
+      data.subscriptions.forEach((song, index) => {
+        const active = index === 0 ? "active" : "";
+
+        const item = document.createElement("div");
+        item.className = `carousel-item ${active}`;
+        item.innerHTML = `
+          <div class="card song-card text-center">
+            <img src="${song.img_url}" class="card-img-top" alt="${song.title}">
+            <div class="card-body">
+              <h5 class="card-title">${song.title}</h5>
+              <p class="card-text">
+                <strong>Artist:</strong> ${song.artist} <br>
+                <strong>Album:</strong> ${song.album} <br>
+                <strong>Year:</strong> ${song.year}
+              </p>
+              <button class="btn btn-warning unsubscribe-btn"
+                data-title="${song.title}"
+                data-artist="${song.artist}"
+                data-year="${song.year}">
+                Remove Song
+              </button>
+            </div>
+          </div>
+        `;
+
+        const indicator = document.createElement("button");
+        indicator.type = "button";
+        indicator.dataset.bsTarget = "#songCarousel";
+        indicator.dataset.bsSlideTo = index;
+        indicator.ariaLabel = `Slide ${index + 1}`;
+        if (index === 0) {
+          indicator.className = "active";
+          indicator.ariaCurrent = "true";
+        }
+
+        carouselInner.appendChild(item);
+        indicators.appendChild(indicator);
+      });
+
+      attachUnsubscribeHandlers();
+    } catch (err) {
+      console.error("Error loading subscribed songs:", err);
+    }
+  }
+
+  function attachUnsubscribeHandlers() {
+    const buttons = document.querySelectorAll(".unsubscribe-btn");
+    const user = JSON.parse(localStorage.getItem("user"));
+
+    buttons.forEach(btn => {
+      btn.addEventListener("click", async () => {
+        const payload = {
+          action: "unsubscribe",
+          email: user.email,
+          title: btn.dataset.title,
+          artist: btn.dataset.artist,
+          year: btn.dataset.year
+        };
+
+        try {
+          const res = await fetch("https://ioik7f1gmc.execute-api.us-east-1.amazonaws.com/default/manageSubscription", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
+          });
+
+          const data = await res.json();
+          if (data.success) {
+            alert("Unsubscribed successfully.");
+            loadSubscribedSongs(); // refresh carousel
+          } else {
+            alert(data.message || "Failed to unsubscribe.");
+          }
+        } catch (err) {
+          console.error("Unsubscribe error:", err);
+          alert("Something went wrong.");
+        }
+      });
+    });
+  }
+</script>
+
   
 
 

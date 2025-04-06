@@ -154,3 +154,11 @@ body {
     --bs-btn-disabled-border-color: #79D7BE;
     --bs-gradient: none;
 }
+
+.min-height-main {
+  min-height: 100vh;
+}
+
+#noSongsMessage {
+  text-align: center;
+}
