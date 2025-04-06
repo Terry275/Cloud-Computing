@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000;
 // 1. Serve all static files from the "public" directory
 app.use(express.static(path.join(__dirname, 'public')));
 
-// 2. Define the root route to serve login.html
+// 2. Define the root route to the login page
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'login.html'));
 });
